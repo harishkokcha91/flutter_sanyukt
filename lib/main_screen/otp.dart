@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../navigation_home_screen.dart';
+
 class Otp extends StatefulWidget {
   const Otp({Key? key}) : super(key: key);
 
@@ -92,7 +94,11 @@ class _OtpState extends State<Otp> {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(builder: (context) => NavigationHomeScreen()),
+                            );
+                          },
                           style: ButtonStyle(
                             foregroundColor:
                                 MaterialStateProperty.all<Color>(Colors.white),

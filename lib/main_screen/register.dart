@@ -117,11 +117,11 @@ class _RegisterState extends State<Register> {
                       child: ElevatedButton(
                         onPressed: () async {
 
-                          var response = await ApiService().generateOtp("9996898299");
-                          print(response);
-                          // Navigator.of(context).push(
-                          //   MaterialPageRoute(builder: (context) => Otp()),
-                          // );
+                          // var response = await ApiService().generateOtp("9996898299");
+                          // print(response);
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => Otp()),
+                          );
                         },
                         style: ButtonStyle(
                           foregroundColor:
